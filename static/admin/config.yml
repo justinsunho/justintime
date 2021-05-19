@@ -1,0 +1,83 @@
+backend:
+    name: git-gateway
+    branch: master
+
+media_folder: /static/images
+public_folder: /images/
+
+collections:
+    - name: pages
+      label: Pages
+      files:
+       - name: home
+         label: Home
+         file: /content/pages/home.md
+         media_folder: '/static/images/pages/home'
+         public_folder: '/images/pages/home'
+         fields:
+          - {label: Title, name: title, widget: string}
+          - label: Hero
+            name: hero
+            widget: object
+            summary: '{{fields.name}}'
+            fields:
+               - {label: "Title", name: title, widget: string}
+               - {label: "Description", name: description, widget: string}
+               - {label: "Button Text", name: buttonText, widget: string}
+               - {label: "Button Link", name: buttonLink, widget: string}
+               - {label: "Image", name: image, widget: image}
+          - label: Programs & classes
+            name: classes
+            widget: object
+            summary: '{{fields.name}}'
+            fields:
+              - {label: "Title", name: title, widget: string}
+              - label: Class List
+                name: classList
+                widget: list
+                summary: '{{fields.title}}'
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Image, name: image, widget: image}
+                  - {label: Description, name: description, widget: string}
+                  - {label: Link Text, name: linkText, widget: string}
+                  - {label: Link Href, name: linkHref, widget: string}
+              - {label: "Class Schedule Link Text", name: linkText, widget: string}
+              - {label: "Class Schedule Link Href", name: linkHref, widget: string}
+          - label: About Us
+            name: about
+            widget: object
+            summary: '{{fields.name}}'
+            fields:
+              - {label: "Image", name: image, widget: image}
+              - {label: "subtitle", name: subtitle, widget: string}
+              - {label: "title", name: title, widget: string}
+              - {label: "description", name: description, widget: string}
+              - {label: "Link Text", name: linkText, widget: string}
+              - {label: "Link Href", name: linkHref, widget: string}
+              - {label: Video Id, name: videoId, widget: string, required: false}
+          - label: Testimonies
+            name: testimonies
+            widget: object
+            summary: '{{fields.name}}'
+            fields:
+              - {label: "subtitle", name: subtitle, widget: string}
+              - {label: "Testimony Link Text", name: linkText, widget: string}
+              - {label: "Testimony Link Href", name: linkHref, widget: string}
+          - label: Location
+            name: location
+            widget: object
+            summary: '{{fields.name}}'
+            fields:
+              - {label: "subtitle", name: subtitle, widget: string}
+              - {label: "title", name: title, widget: string}
+              - label: Location List
+                name: locationList
+                widget: list
+                summary: '{{fields.title}}'
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Image, name: image, widget: image}
+                  - {label: Description, name: description, widget: string}
+                  - {label: "Link Text", name: linkText, widget: string}
+                  - {label: "Link Href", name: linkHref, widget: string}

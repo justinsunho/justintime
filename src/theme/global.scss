@@ -1,0 +1,43 @@
+@import "./variables";
+@import "../../static/fonts/fonts.css";
+@import "./bootstrap_variables";
+@import "~bootstrap-4-grid/scss/grid.scss";
+@import "~rfs/scss";
+@import "./bootstrap_override.scss";
+@import "./typography";
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-attachment: fixed;
+    color: $black;
+    font-family: "Source Sans Pro", "Helvetica";
+    font-size: 16px;
+    line-height: 1.5;
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @media (max-width: $breakpoint-medium) {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
+}

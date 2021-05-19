@@ -1,0 +1,16 @@
+@import "theme/variables";
+
+.layout {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+.contentWrapper {
+    padding-top: 3rem;
+    overflow: hidden;
+
+    @media (max-width: $breakpoint-medium) {
+        padding-top: 5rem;
+    }
+}
