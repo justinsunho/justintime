@@ -4,7 +4,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Merriweather", "Georgia", "Helvetica";
+    font-family: "Vulf Sans", "Georgia", "Helvetica";
     margin-top: 0;
     margin-bottom: 1rem;
     line-height: 1.5;
@@ -31,14 +31,14 @@ h5 {
 }
 
 p {
-    color: $neutral-6;
+    color: $text;
     margin-bottom: 1.5em;
     margin-top: 0;
     line-height: 1.75;
+    font-family: "Vulf Sans";
 }
 
 .longform {
-    font-family: "Source Serif Pro";
     font-size: 1.25rem;
 
     strong {
@@ -47,15 +47,10 @@ p {
 }
 
 a {
-    color: $action-default;
+    color: $white;
     text-decoration: none;
 
     &:hover {
-        text-decoration: none;
-        color: $action-hover;
+        text-decoration: underline;
     }
-
-    // &:visited {
-    //     color: $action-active;
-    // }
 }

@@ -1,10 +1,13 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Hero } from "components/organisms";
 import { MainLayout } from "components/layouts";
-import * as styles from "./styles.module.scss";
 
-const Index = ({}) => {
-    return <MainLayout></MainLayout>;
+const Index = () => {
+    return (
+        <MainLayout>
+            <Hero button description={"This is the description"} headingText={"This is the heading"} />
+        </MainLayout>
+    );
 };
 
 export default Index;
